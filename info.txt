@@ -1,0 +1,26 @@
+Project : Simple End 2 End encryption software
+
+about:this project does not cover entire scope of e2ee but just a simple implementation to understand how e2ee works.
+
+1.the secret session key is genreted using Diffie-Hellman key exchange protocol
+
+2.A simple encryption and decryption function are implemented here , aes and cipher modules in go are used here.
+
+3.simple sever is implemented , that is hosted at port number 8080 . server performs few simple operations
+    *host the server
+    *once a client connects , instigate the keys exchange
+    *keep the list of all the clients
+    *recieve and send message with clients with thee help of encryption and decryption function
+    *once a message is recieved from the client , broadcast it to all the other clients
+    *once a client terminates , the client list is updated
+
+4.client connects  to the  server that is hosted a port 8080 and once the connction is established the ,client can interact with other clients
+
+
+Running:
+     In order to run this software first make shure that port 8080 is not being used , if so change the port in the code
+     After opening the software in VS code run the server.go first , and in new terminals run as  client.go file and 
+     client can interact with other using the server.
+
+
+                                        THANK YOU 
